@@ -1,0 +1,17 @@
+{
+  "name": "ajax",
+  "version": "0.0.0",
+  "description": "Ajax class",
+  "main": "lib/ajax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/ajax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/firstandthird/ajax/issues"
+  },
+  "homepage": "https://github.com/firstandthird/ajax#readme"
+}
