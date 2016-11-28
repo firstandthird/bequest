@@ -1,10 +1,10 @@
-# ajax
+# bequest
 Makes a request to a remote server
 
 Usage:
 
 ```js
-import Ajax from 'ajax';
+import Ajax from 'bequest';
 
 Ajax.request('https://example.com/api/test', 'PUT', { somedata: 'something' }, resp => {
   console.log(resp.statusCode);

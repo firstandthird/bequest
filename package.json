@@ -1,7 +1,7 @@
 {
-  "name": "ajax",
+  "name": "bequest",
   "version": "0.0.0",
-  "description": "Ajax class",
+  "description": "An ajax class",
   "main": "dist/ajax.js",
   "scripts": {
     "build": "mkdir -p dist && babel lib/ajax.js --out-file dist/ajax.js --source-maps",
@@ -19,12 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/ajax.git"
+    "url": "git+https://github.com/firstandthird/bequest.git"
   },
   "bugs": {
-    "url": "https://github.com/firstandthird/ajax/issues"
+    "url": "https://github.com/firstandthird/bequest/issues"
   },
-  "homepage": "https://github.com/firstandthird/ajax#readme",
+  "homepage": "https://github.com/firstandthird/bequest#readme",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
