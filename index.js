@@ -26,9 +26,12 @@ export default class Ajax {
 
     if (typeof data === 'object' && data !== null) {
       serializedData = Ajax.serialize(data);
+      const join = url.indexOf('?') > -1 ? '&' : '?';
+
+      url = url + join + serializedData;
     }
 
-    Ajax.request(url, 'GET', serializedData, headers, callback);
+    Ajax.request(url, 'GET', null, headers, callback);
   }
 
   static post(url, ...args) {

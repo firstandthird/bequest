@@ -32,7 +32,7 @@
   "homepage": "https://github.com/firstandthird/bequest#readme",
   "devDependencies": {
     "eslint-config-firstandthird": "3.2.0",
-    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-import": "2.7.0",
     "scriptkit": "0.2.0"
   },
   "scriptkit": {
