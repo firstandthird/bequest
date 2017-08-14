@@ -21,37 +21,27 @@ export default class Ajax {
   }
 
   static get(url, ...args) {
-    const [data, headers, callback] = args;
-    let serializedData = data;
-
-    if (typeof data === 'object' && data !== null) {
-      serializedData = Ajax.serialize(data);
-      const join = url.indexOf('?') > -1 ? '&' : '?';
-
-      url = url + join + serializedData;
-    }
-
-    Ajax.request(url, 'GET', null, headers, callback);
+    return Ajax.request(url, 'GET', ...args);
   }
 
   static post(url, ...args) {
-    Ajax.request(url, 'POST', ...args);
+    return Ajax.request(url, 'POST', ...args);
   }
 
   static put(url, ...args) {
-    Ajax.request(url, 'PUT', ...args);
+    return Ajax.request(url, 'PUT', ...args);
   }
 
   static head(url, ...args) {
-    Ajax.request(url, 'HEAD', ...args);
+    return Ajax.request(url, 'HEAD', ...args);
   }
 
   static del(url, ...args) {
-    Ajax.request(url, 'DELETE', ...args);
+    return Ajax.request(url, 'DELETE', ...args);
   }
 
   static options(url, ...args) {
-    Ajax.request(url, 'OPTIONS', ...args);
+    return Ajax.request(url, 'OPTIONS', ...args);
   }
 
   /**
@@ -89,7 +79,7 @@ export default class Ajax {
       headers = {};
     }
 
-    if (headers === null) {
+    if (headers === null || typeof headers === 'undefined') {
       headers = {};
     }
 
@@ -99,6 +89,19 @@ export default class Ajax {
     if (validMethods.indexOf(useMethod) === -1) {
       const err = new TypeError(`Method must be one of the following: ${validMethods.join(', ')}`);
       return callback(err);
+    }
+
+    if (typeof data === 'object' &&
+      data !== null && method === 'GET') {
+      let serializedData = data;
+
+      if (typeof data === 'object' && data !== null) {
+        serializedData = Ajax.serialize(data);
+        const join = url.indexOf('?') > -1 ? '&' : '?';
+
+        url = url + join + serializedData;
+        data = null;
+      }
     }
 
     const xhr = new XMLHttpRequest();
