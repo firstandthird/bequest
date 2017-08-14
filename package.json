@@ -1,6 +1,6 @@
 {
   "name": "bequest",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "An ajax class",
   "main": "dist/ajax.js",
   "module": "index.js",
