@@ -129,8 +129,15 @@ export default class Ajax {
     });
 
     if (data !== null) {
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(JSON.stringify(data));
+      let dataString = data;
+      let contentHeader = 'application/x-www-form-urlencoded';
+      if (typeof data === 'object') {
+        dataString = JSON.stringify(data);
+        contentHeader = 'application/json';
+      }
+
+      xhr.setRequestHeader('Content-Type', contentHeader);
+      xhr.send(dataString);
     } else {
       xhr.send();
     }

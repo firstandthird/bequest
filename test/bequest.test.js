@@ -116,3 +116,10 @@ test('GET', assert => {
 
   assert.end();
 });
+
+test('POST - formData', assert => {
+  Ajax.post('/dummy', 'a=b&foo=3');
+  assert.equal(xhr.method, 'POST', 'Method should be correct');
+  assert.equal(xhr.data, 'a=b&foo=3', 'Should pass data through');
+  assert.end();
+});
