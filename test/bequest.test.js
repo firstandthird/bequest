@@ -25,6 +25,10 @@ class XHR {
     return this.responseheader;
   }
 
+  getAllResponseHeaders() {
+    return this.responseheader;
+  }
+
   teardown() {
     this.method = null;
     this.url = null;
@@ -94,6 +98,7 @@ test('Generic', assert => {
     xhr.onreadystatechange();
 
     assert.equal(response.data.a, 'b', `${verb}: JSON is parsed if response is adequate`);
+    assert.ok(response.headers === 'json', `${verb}: Contains correct headers`);
 
     xhr.teardown();
     response = null;

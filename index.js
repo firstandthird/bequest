@@ -118,6 +118,7 @@ export default class Ajax {
         }
 
         return callback(null, {
+          headers: xhr.getAllResponseHeaders(),
           statusCode: xhr.status,
           data: parsedResponse
         });
