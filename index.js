@@ -125,6 +125,8 @@ export default class Ajax {
       }
     };
 
+    xhr.onerror = e => callback(e, null);
+
     Object.keys(headers).forEach(header => {
       xhr.setRequestHeader(header, headers[header]);
     });

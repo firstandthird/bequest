@@ -107,6 +107,16 @@ test('Generic', assert => {
   assert.end();
 });
 
+test('Error', assert => {
+  Ajax.get('/dummy', { a: 'b', foo: 3 }, (e, data) => {
+    assert.equal(e, 'error', 'Error passed');
+    assert.equal(data, null, 'Data is null');
+    assert.end();
+  });
+
+  xhr.onerror('error');
+});
+
 test('GET', assert => {
   Ajax.get('/dummy', { a: 'b', foo: 3 });
 

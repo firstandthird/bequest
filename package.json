@@ -9,7 +9,7 @@
     "build": "scriptkit build",
     "dev": "scriptkit dev",
     "test": "cat test/bequest.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec",
-    "prepublish": "scriptkit"
+    "prepublishOnly": "scriptkit"
   },
   "watch": {
     "lib/ajax.js": [
