@@ -28,6 +28,10 @@ export default class Ajax {
     return Ajax.request(url, 'POST', ...args);
   }
 
+  static patch(url, ...args) {
+    return Ajax.request(url, 'PATCH', ...args);
+  }
+
   static put(url, ...args) {
     return Ajax.request(url, 'PUT', ...args);
   }

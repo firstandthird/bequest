@@ -62,7 +62,7 @@ test('Is possible to serialize data to be passed on the URL', assert => {
 
 // Shortcuts
 test('Generic', assert => {
-  const methods = ['get', 'post', 'put', 'head', 'del', 'options'];
+  const methods = ['get', 'patch', 'post', 'put', 'head', 'del', 'options'];
   let response = null;
   const callback = (e, a) => { response = a; };
 
