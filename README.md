@@ -1,7 +1,13 @@
 # bequest
 Makes a request to a remote server
 
-Usage:
+## Installation
+
+```sh
+npm install --save bequest
+```
+
+## Usage
 
 ```js
 import Ajax from 'bequest';
