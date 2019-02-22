@@ -4,7 +4,7 @@ Makes a request to a remote server
 ## Installation
 
 ```sh
-npm install --save bequest
+npm install bequest
 ```
 
 ## Usage
