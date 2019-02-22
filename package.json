@@ -2,8 +2,8 @@
   "name": "bequest",
   "version": "1.8.0",
   "description": "An ajax class",
-  "main": "dist/ajax.js",
-  "module": "index.js",
+  "main": "index.js",
+  "module": "dist/ajax.esm.js",
   "scripts": {
     "start": "scriptkit",
     "build": "scriptkit build",
@@ -31,13 +31,13 @@
   },
   "homepage": "https://github.com/firstandthird/bequest#readme",
   "devDependencies": {
-    "eslint-config-firstandthird": "4.0.1",
-    "eslint-plugin-import": "2.7.0",
-    "phantomjs-prebuilt": "2.1.15",
-    "scriptkit": "0.4.0",
-    "tap-spec": "4.1.1",
-    "tape-rollup": "4.6.4",
-    "tape-run": "3.0.0"
+    "eslint-config-firstandthird": "^4.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "scriptkit": "^2.0.1",
+    "tap-spec": "^5.0.0",
+    "tape-rollup": "^4.6.4",
+    "tape-run": "^5.0.0"
   },
   "scriptkit": {
     "files": {
