@@ -1,4 +1,4 @@
-# bequest
+# bequest ![npm](https://img.shields.io/npm/v/bequest.svg)
 
 Makes a request to a remote server
 
